@@ -1,0 +1,38 @@
+﻿@model List<LibraryManagementSystem.EntityLayer.Concrete.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Default/Index.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-sm-12 col-xl-12">
+    <div class="rounded h-100 p-4">        
+        <h6 class="mb-4">Categories</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.CategoryName</td>                        
+                        <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Delete</a></td>
+                        <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Category/AddCategory/" class="btn btn-outline-primary">Add New Category</a>
+    </div>
+</div>
+
+

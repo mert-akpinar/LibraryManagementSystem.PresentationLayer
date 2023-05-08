@@ -1,0 +1,24 @@
+﻿@model LibraryManagementSystem.EntityLayer.Concrete.Author
+
+@{
+    ViewData["Title"] = "AddAuthor";
+    Layout = "~/Views/Default/Index.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-sm-12 col-xl-12">
+    <div class="rounded h-100 p-4">
+        <h6 class="mb-4">Add New Author</h6>
+        <form method="post">
+            <div class="mb-3">
+                <label for="AuthorNAme" class="form-label">Author Name</label>
+                <input type="text" class="form-control" id="AuthorName" asp-for="AuthorName" />
+            </div>
+            <div class="mb-3">
+                <label for="AuthorSurname" class="form-label">Author Surname</label>
+                <input type="text" class="form-control" id="AuthorSurname" asp-for="AuthorSurname" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

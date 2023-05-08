@@ -1,0 +1,37 @@
+﻿@model LibraryManagementSystem.EntityLayer.Concrete.Book
+@{
+    Layout = "~/Views/Default/Index.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-sm-12 col-xl-12">
+    <div class="rounded h-100 p-4">
+        <h6 class="mb-4">Add New Book</h6>
+        <form method="post">
+            <div class="mb-3">
+                <label for="BookTitle" class="form-label">Book Name</label>
+                <input type="text" class="form-control" id="BookTitle" asp-for="BookTitle" />
+            </div>
+            <div class="mb-3">
+                <label for="CategoryID" class="form-label">Category</label>
+                <input type="text" class="form-control" id="CategoryID" asp-for="CategoryID" />
+            </div>
+            <div class="mb-3">
+                <label for="AuthorID" class="form-label">Author</label>
+                <input type="text" class="form-control" id="AuthorID" asp-for="AuthorID" />
+            </div>
+            <div class="mb-3">
+                <label for="PageCount" class="form-label">Page Count</label>
+                <input type="text" class="form-control" id="PageCount" asp-for="PageCount" />
+            </div>
+            <div class="mb-3">
+                <label for="publishing" class="form-label">Publisher</label>
+                <input type="text" class="form-control" id="publishing" asp-for="publishing" />
+            </div>
+            <div class="mb-3">
+                <label for="RelaseDate" class="form-label">Relase Date</label>
+                <input type="text" class="form-control" id="RelaseDate" asp-for="RelaseDate" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>

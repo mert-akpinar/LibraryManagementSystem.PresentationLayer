@@ -1,0 +1,49 @@
+﻿@model List<LibraryManagementSystem.EntityLayer.Concrete.Author>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Default/Index.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-sm-12 col-xl-12">
+    <div class="rounded h-100 p-4">
+        <form action="@Url.Action("Index", "Author")" method="get">
+            <label for="searchType">Search by:</label>
+            <select name="searchType" id="searchType">
+                <option value="AuthorName">Author Name</option>
+                <option value="AuthorSurname">Author Surname</option>               
+            </select>
+            <label for="searchString">Search term:</label>
+            <input type="text" name="searchString" id="searchString">
+            <button type="submit">Search</button>
+        </form>
+        <h6 class="mb-4">Authors</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Author Name</th>
+                    <th scope="col">Author Surname</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.AuthorName</td>
+                        <td>@item.AuthorSurname</td>
+                        <td><a href="/Author/DeleteAuthor/@item.AuthorID" class="btn btn-outline-danger">Delete</a></td>
+                        <td><a href="/Author/UpdateAuthor/@item.AuthorID" class="btn btn-outline-success">Update</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Author/AddAuthor/" class="btn btn-outline-primary">Add New Author</a>
+    </div>
+</div>
+

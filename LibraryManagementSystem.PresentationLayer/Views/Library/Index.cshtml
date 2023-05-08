@@ -1,0 +1,55 @@
+﻿@model List<LibraryManagementSystem.EntityLayer.Concrete.Book>
+@{
+    Layout = "~/Views/Default/Index.cshtml";
+    int count = 0;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-sm-12 col-xl-12">
+    <div class="rounded h-100 p-4">
+        <form action="@Url.Action("Index", "Library")" method="get">
+            <label for="searchType">Search by:</label>
+            <select name="searchType" id="searchType">
+                <option value="BookTitle">Book Title</option>
+                <option value="AuthorName">Author</option>
+                <option value="publishing">Publishing</option>
+            </select>
+            <label for="searchString">Search term:</label>
+            <input type="text" name="searchString" id="searchString">
+            <button type="submit">Search</button>
+        </form>
+        <h6 class="mb-4">Library</h6>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Author Name</th>
+                    <th scope="col">Page Count</th>
+                    <th scope="col">Publisher</th>
+                    <th scope="col">Relase Date</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+                </tr>
+            </thead>
+            <tbody>
+               @foreach(var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.BookTitle</td>
+                        <td>@item.Category.CategoryName</td>
+                        <td>@item.Author.AuthorName @item.Author.AuthorSurname</td>
+                        <td>@item.PageCount</td>
+                        <td>@item.publishing</td>
+                        <td>@item.RelaseDate</td>                        
+                        <td><a href="/Library/DeleteBook/@item.BookID" class="btn btn-outline-danger">Delete</a></td>
+                        <td><a href="/Library/UpdateBook/@item.BookID" class="btn btn-outline-success">Update</a></td>
+                     </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Library/AddBook/" class="btn btn-outline-primary">Add New Book</a>
+    </div>
+</div>
