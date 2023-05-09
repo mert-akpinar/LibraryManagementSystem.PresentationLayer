@@ -25,3 +25,31 @@ handling. If you use GitHub, we encourage you to make as many meaningful commits
 that we can understand your thought process and development approach. Additionally, please 
 provide API endpoint documentation and usage instructions.<br/>
 Good luck!
+
+-------------------------------------------------------
+Home Page
+![Home page](https://user-images.githubusercontent.com/106198602/237018668-4f3261d3-bb2d-4d43-b683-df7f2c36a6f8.png)
+-------------------------------------------------------
+Library Page
+![Library Page](https://user-images.githubusercontent.com/106198602/237018724-c68ce503-acfa-4869-9052-2ed720f106d6.png)
+-------------------------------------------------------
+Author Page
+![Author Page](https://user-images.githubusercontent.com/106198602/237018790-f365f57d-897d-43f1-b28e-ce1f6ef1afd9.png)
+-------------------------------------------------------
+Category Page
+![Category Page](https://user-images.githubusercontent.com/106198602/237018826-33736116-c137-473a-8d6a-3d79a1aca275.png)
+-------------------------------------------------------
+Add Book Page 
+![Add Book Page](https://user-images.githubusercontent.com/106198602/237018895-c9440dff-2dd5-4262-879d-a6f5aa3f324b.png)
+-------------------------------------------------------
+Update Book Page
+![Update Book Page](https://user-images.githubusercontent.com/106198602/237018948-1d76f70a-87de-459f-9f3d-15d9884fae4e.png)
+-------------------------------------------------------
+Update Category Page
+![Update Category Page](https://user-images.githubusercontent.com/106198602/237019012-11f7e91a-1183-4ac4-acea-a36f24c80d51.png)
+
+
+
+
+
+
