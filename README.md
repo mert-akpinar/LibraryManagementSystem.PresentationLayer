@@ -41,12 +41,8 @@ Category Page
 -------------------------------------------------------
 Add Book Page 
 ![Add Book Page](https://user-images.githubusercontent.com/106198602/237018895-c9440dff-2dd5-4262-879d-a6f5aa3f324b.png)
--------------------------------------------------------
-Update Book Page
-![Update Book Page](https://user-images.githubusercontent.com/106198602/237018948-1d76f70a-87de-459f-9f3d-15d9884fae4e.png)
--------------------------------------------------------
-Update Category Page
-![Update Category Page](https://user-images.githubusercontent.com/106198602/237019012-11f7e91a-1183-4ac4-acea-a36f24c80d51.png)
+
+
 
 
 
